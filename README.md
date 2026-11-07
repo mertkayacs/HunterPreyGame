@@ -33,7 +33,7 @@
   </picture>
 </p>
 
-Hunter Prey Game is a small survival game in Java Swing with no framework. You steer a red square while five green circles chase it, and the window title counts the seconds you stay alive. When a hunter catches you, the title shows how long you lived and the window closes after ten seconds. The game waits on a thread between steps and does not use intersects().
+Hunter Prey Game is a small survival game in Java Swing with no framework. You steer a red square while five green circles drift around the board in random directions, and the window title counts the seconds you stay alive. When a hunter touches you, the title shows how long you lived and the window closes after ten seconds. The game waits on a thread between steps and does not use intersects().
 
 ---
 
@@ -47,17 +47,60 @@ The whole game is four Java files.
 | <img src="docs/assets/readme/icons/timer.svg" width="18" height="18" alt=""> **A live score** | The title bar shows the seconds you have survived and updates once per second. |
 | <img src="docs/assets/readme/icons/package.svg" width="18" height="18" alt=""> **Plain Java** | No framework and no dependencies. The Eclipse project targets Java 8. |
 
+## A quick tour
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/start-dark.webp">
+        <img src="docs/assets/readme/tour/start-light.webp" alt="The game window with five green circles and a red square, titled with the seconds passed">
+      </picture>
+      <h3>Round start</h3>
+      Five hunters drift around the board while the title bar counts seconds. The prey is the small red square.
+    </td>
+    <td width="50%" valign="top">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/moved-dark.webp">
+        <img src="docs/assets/readme/tour/moved-light.webp" alt="The game window a few seconds later with the red square moved">
+      </picture>
+      <h3>Moving the prey</h3>
+      W, A, S, D or the arrow keys move the red square.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/over-dark.webp">
+        <img src="docs/assets/readme/tour/over-light.webp" alt="The game window with the title &quot;Game Over - Lived 88 secs -Closing in 10 secs&quot;">
+      </picture>
+      <h3>Game over</h3>
+      When a hunter touches the prey, the title shows how long you lived and the window closes ten seconds later.
+    </td>
+    <td width="50%" valign="top">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/code-dark.webp">
+        <img src="docs/assets/readme/tour/code-light.webp" alt="Code card showing changeHunterDirection in Game.java">
+      </picture>
+      <h3>Random hunters</h3>
+      Every few steps each hunter gets a new random direction out of eight.
+    </td>
+  </tr>
+</table>
+
+<p align="center"><sub>Captured from the running game on a virtual display. The window frames are drawn by Swing because that display has no window manager.</sub></p>
+
 ## Features
 
 **Gameplay**
 
-- Five hunters chase a single prey.
+- Five hunters move in random directions around a single prey.
 - The window closes itself ten seconds after the game ends.
 
 **Code**
 
 - Map.java holds the window, the game loop and the keys.
-- Game.java draws the board and detects when a hunter reaches you.
+- Game.java draws the board and detects when a hunter touches you.
 - Hunter.java and Prey.java hold the two kinds of piece.
 
 ## Quick start
@@ -83,7 +126,7 @@ With W, A, S and D or the arrow keys.
 <details>
 <summary><b>How long does a round last?</b></summary>
 
-Until a hunter catches you. The title bar counts the seconds, then the window closes ten seconds after the game ends.
+Until a hunter touches you. The title bar counts the seconds, then the window closes ten seconds after the game ends.
 </details>
 
 <details>
