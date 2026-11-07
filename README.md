@@ -29,7 +29,7 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/hero-dark.webp">
-    <img src="docs/assets/readme/hero-light.webp" alt="The Hunter Prey Game window: a black playfield with five green circles and a small red square, and the title bar reading &quot;HunterPreyGame v2.0 - 3 Seconds passed.&quot;" width="960">
+    <img src="docs/assets/readme/hero-light.webp" alt="The Hunter Prey Game window: a black playfield with five green circles and a small red square, and the title bar reading &quot;HunterPreyGame v2.0 - 7 Seconds passed.&quot;" width="960">
   </picture>
 </p>
 
@@ -72,7 +72,7 @@ The whole game is four Java files.
     <td width="50%" valign="top">
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/over-dark.webp">
-        <img src="docs/assets/readme/tour/over-light.webp" alt="The game window with the title &quot;Game Over - Lived 88 secs -Closing in 10 secs&quot;">
+        <img src="docs/assets/readme/tour/over-light.webp" alt="The game window with the title &quot;Game Over - Lived 32 secs -Closing in 10 secs&quot;">
       </picture>
       <h3>Game over</h3>
       When a hunter touches the prey, the title shows how long you lived and the window closes ten seconds later.
